@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Using Icons</title>
+    <title>Uday | Aint another Sample page</title>
     <!-- the three things that jQuery Mobile needs to work -->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -15,12 +15,72 @@
         <div data-role="content">
             <h2>Teams</h2>
             <ul data-role="listview" data-inset="true">
-                <li><a href="#"><img src='images/us.png' class='ui-li-icon'/>United States</a></li>
+                <li><a href="#usaprofile"><img src='images/us.png' class='ui-li-icon'/>United States</a></li>
+                <li><a href="#germanyprofile"><img src='images/de.png' class='ui-li-icon'/>Germany</a></li>
                 <li><a href="#"><img src='images/gb.png' class='ui-li-icon'/>Great Britain</a></li>
-                <li><a href="#"><img src='images/de.png' class='ui-li-icon'/>Germany</a></li>
                 <li><a href="#"><img src='images/gf.png' class='ui-li-icon'/>France</a></li>
             </ul>
+            <a href="#secondpage" data-role="button">Today's Game Tracker</a>
+            <!-- Here there should be some logic on dynamic view of the Playing teams. It should be dragged from the server to display the appropriate teams in grid-blocks.-->
         </div>
     </section>
+    
+    <!-- This is the Second page(Tracker) -->
+    <section id="secondpage" data-role="page">
+    <header data-role="header">
+        <h1>Tracker</h1>
+        <a href="#firstpage" class="ui-btn-left" data-role="button" >Home</a>
+    </header>
+    <div data-role="content">
+    <div class="ui-grid-a">
+
+	    <!-- USA stat tracking block goes here...-->
+    	<div class="ui-block-a"> 
+    		<h4>USA</h4>
+    		<p> Logic for form action of invoking the incrementer goes here...</p>
+    	</div>
+    	<!-- Germany stat tracking block goes here...-->
+    	<div class="ui-block-b">
+    		<h4>Germany</h4>
+    		<p> Logic for form action of the incrementer goes here...</p>
+    	</div>
+    </div>
+    </div>
+
+    </section>
+    
+<!-- USA Profile -->   
+	<section id="usaprofile" data-role="page">
+    <header data-role="header">
+        <h1>United States</h1>
+        <a href="#firstpage" class="ui-btn-left" data-role="button" >Home</a>
+    </header>
+    <div data-role="content">
+    <p> The team was formed in the year xxxx.</p>
+    <ul>
+    	<li>Coach: Andrew</li>
+    	<li>Rank: 45</li>
+    </ul>
+    </div>
+
+    </section>
+	
+<!-- Germany Profile -->	
+	<section id="germanyprofile" data-role="page">
+    <header data-role="header">
+        <h1>Germany</h1>
+        <a href="#firstpage" class="ui-btn-left" data-role="button" >Home</a>
+    </header>
+    <div data-role="content">
+    <p> The team was formed in the year xxxx.</p>
+    <ul>
+    	<li>Coach: Andrew's bro</li>
+    	<li>Rank: 4</li>
+    </ul>
+    </div>
+
+    </section>
+
+
 </body>
 </html>
