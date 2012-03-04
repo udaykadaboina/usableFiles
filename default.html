@@ -15,14 +15,20 @@
         <div data-role="content">
             <h2>Teams</h2>
             <ul data-role="listview" data-inset="true">
-                <li><a href="#usaprofile"><img src='images/us.png' class='ui-li-icon'/>United States</a></li>
-                <li><a href="#germanyprofile"><img src='images/de.png' class='ui-li-icon'/>Germany</a></li>
-                <li><a href="#"><img src='images/gb.png' class='ui-li-icon'/>Great Britain</a></li>
-                <li><a href="#"><img src='images/gf.png' class='ui-li-icon'/>France</a></li>
+                <li><a href="#usaprofile"><img src='images/us.png' class='ui-li-icon'/>United States</a>
+                <a href="#">Stats</a> </li>
+                <li><a href="#germanyprofile"><img src='images/de.png' class='ui-li-icon'/>Germany</a>
+                <a href="#">Stats</a> </li>
+                <li><a href="#"><img src='images/gb.png' class='ui-li-icon'/>England</a>
+                <a href="#">Stats</a> </li>
+                <li><a href="#"><img src='images/gf.png' class='ui-li-icon'/>France</a>
+                <a href="#">Stats</a> </li>
             </ul>
+            
             <a href="#secondpage" data-role="button">Today's Game Tracker</a>
             <!-- Here there should be some logic on dynamic view of the Playing teams. It should be dragged from the server to display the appropriate teams in grid-blocks.-->
         </div>
+        <div data-role="footer" class="ui-bar" data-position="fixed"><p>Footr inc. :P </p></div>
     </section>
     
     <!-- This is the Second page(Tracker) -->
@@ -33,20 +39,31 @@
     </header>
     <div data-role="content">
     <div class="ui-grid-a">
-
-	    <!-- USA stat tracking block goes here...-->
-    	<div class="ui-block-a"> 
+		<!-- USA stat tracking block goes here...-->
+    	<div class="ui-block-a" style="background-color:#FFFF99"> 
+		<!-- this section has to be dynamic <%= team.name => -->
     		<h4>USA</h4>
     		<p> Logic for form action of invoking the incrementer goes here...</p>
+    		<form id="Team_left" method="post"action="">
+    			<input type="button" data-icon="plus" name="Foul" value="Foul" />
+    			<input type="button" data-icon="plus" name="" value="Goal" />
+    			<input type="button" data-icon="gear" name="" value="Event" />
+    		</form>
     	</div>
     	<!-- Germany stat tracking block goes here...-->
-    	<div class="ui-block-b">
+    	<div class="ui-block-b" style="background-color:#99CCFF" >
     		<h4>Germany</h4>
     		<p> Logic for form action of the incrementer goes here...</p>
+    		<form id="Team_right" method="post"action="">
+    			<input type="button" data-icon="plus" name="Foul" value="Foul" />
+    			<input type="button" data-icon="plus" name="" value="Goal" />
+    			<input type="button" data-icon="gear" name="" value="Event" />
+    		</form>
+
     	</div>
     </div>
     </div>
-
+	<div data-role="footer" class="ui-bar" data-position="fixed" ><p>Footr inc. :P </p></div>
     </section>
     
 <!-- USA Profile -->   
@@ -61,7 +78,11 @@
     	<li>Coach: Andrew</li>
     	<li>Rank: 45</li>
     </ul>
+        	<a href="#3rdpage" data-role="button"> Team Roster</a>
+        	<!-- again this has to be the dynamic content -->
+
     </div>
+	<div data-role="footer" class="ui-bar" data-position="fixed"><p>Footr inc. :P </p></div>
 
     </section>
 	
@@ -77,10 +98,20 @@
     	<li>Coach: Andrew's bro</li>
     	<li>Rank: 4</li>
     </ul>
+        	<a href="#3rdpage" data-role="button"> Team Roster</a>
+        	<!-- again this has to be the dynamic content -->
     </div>
+	<div data-role="footer" class="ui-bar" data-position="fixed"><p>Footr inc. :P </p></div>
 
     </section>
-
-
+<!-- Roster  Page-->
+	<section id="3rdpage" data-role="page">
+    <header data-role="header">
+        <h1>Roster</h1>
+        <a href="#firstpage" class="ui-btn-left" data-role="button" >Home</a>
+    </header>
+    <div data-role="content">
+    <p> here goes the dynamic content.</p></div>
+	</section>
 </body>
 </html>
