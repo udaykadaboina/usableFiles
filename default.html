@@ -31,7 +31,10 @@
         <div data-role="footer" class="ui-bar" data-position="fixed"><p>Footr inc. :P </p></div>
     </section>
     
-    <!-- This is the Second page(Tracker) -->
+    
+    
+    
+<!-- This is the Second page(Tracker) -->
     <section id="secondpage" data-role="page">
     <header data-role="header">
         <h1>Tracker</h1>
@@ -47,7 +50,15 @@
     		<form id="Team_left" method="post"action="">
     			<input type="button" data-icon="plus" name="Foul" value="Foul" />
     			<input type="button" data-icon="plus" name="" value="Goal" />
-    			<input type="button" data-icon="gear" name="" value="Event" />
+    			<!-- <input type="button" data-icon="gear" name="" value="Event" />-->
+    			<div data-role="collapsible" data-inset="true">
+    			<p>Type</p>
+    			<h3>Events</h3>
+    			<input type="button" value="fifty-fifty-won" />
+    			<input type="button" value="fifty-fifty-lost" />
+    			<input type="button" value="Goal kick" />
+    			<button></button>
+    			</div>
     		</form>
     	</div>
     	<!-- Germany stat tracking block goes here...-->
@@ -57,7 +68,28 @@
     		<form id="Team_right" method="post"action="">
     			<input type="button" data-icon="plus" name="Foul" value="Foul" />
     			<input type="button" data-icon="plus" name="" value="Goal" />
-    			<input type="button" data-icon="gear" name="" value="Event" />
+    			<div data-role="collapsible" data-inset="true">
+    			<p>Type</p>
+    			<h3>Events</h3>
+    			<input type="button" value="fifty-fifty-won" />
+    			<input type="button" value="fifty-fifty-lost" />
+    			<input type="button" value="Goal kick" />
+    			<input type="button" value="minutes Played" /> <!--lil bit vague on this -->
+				<input type="button" value="penalty-kick" />
+				<input type="button" value="penalty-kick-against" />
+				<input type="button" value="GK-saved" />
+				<input type="button" value="shot" />
+				<input type="button" value="shot on goal" />
+				<input type="button" value="substition" />
+				<input type="button" value="corner" />
+				<input type="button" value="assist" />
+
+
+
+
+
+    			</div>
+
     		</form>
 
     	</div>
@@ -65,6 +97,9 @@
     </div>
 	<div data-role="footer" class="ui-bar" data-position="fixed" ><p>Footr inc. :P </p></div>
     </section>
+    
+    
+    
     
 <!-- USA Profile -->   
 	<section id="usaprofile" data-role="page">
