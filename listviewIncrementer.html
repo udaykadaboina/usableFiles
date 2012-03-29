@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic List Views</title>
+    <!-- the three things that jQuery Mobile needs to work -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+</head>
+
+<body>
+    <!-- This is the first page -->
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+        <h1>Using Lists</h1>
+        </header>
+        <div data-role="content">
+            <h2>Ordered List Example</h2>
+            <ol data-role="listview">
+                <li class="ui-corner-bottom ui-corner-top" data-theme="a" ><a href="#">List Item 1</a></li>
+                <li class="ui-corner-bottom ui-corner-top" data-theme="a"><a href="#">List Item 2</a></li>
+                <li class="ui-corner-bottom ui-corner-top" data-theme="a"><a href="#">List Item 3</a></li>
+                <li data-theme="a"><a href="#">List Item 4</a></li>
+            </ol>
+            <h3>Unordered List Example</h3>
+            <ul data-role="listview">
+                <li><a href="#">List Item 1</a></li>
+                <li><a href="#">List Item 2</a></li>
+			</ul>
+			<br />
+			<br />
+            <script type="application/javascript">
+            	$( '#firstpage' ).live( 'pageinit',function(event){
+  					alert( 'This page was just enhanced by jQuery Mobile!' );
+				});
+
+			</script>
+			<button id="up">+</button>
+			<button id="down">-</button> 
+			<script type="text/javascript">  
+			var currentValue = 0; 
+			$('#firstpage').live('pageinit', function(event) { 
+
+  				$('#up').click(function() { 
+    				currentValue++; 
+    				alert(currentValue);
+  				}); 
+  				$('#down').click(function() { 
+    				if (currentValue > 0) { 
+      				currentValue--; 
+      				alert(currentValue);
+
+    				} 
+  				}); 
+}); 
+</script>
+        </div>
+    </section>
+</body>
+</html>
