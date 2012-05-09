@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+
+
+
+<div data-role="page" id="firstpage">
+    <div data-role="header">
+        <h1>Page One</h1>
+    </div>
+    <div data-role="content">
+        <input data-role="button" value ="+" id="up"></input>
+        <input data-role="button" value="-" id="down"></input> 
+        <script type="text/javascript">
+            var currentValue = 0; 
+            $('#firstpage').live('pageinit', function(event) { 
+
+                  $('#up').click(function() { 
+                    currentValue++; 
+                    alert(currentValue);
+                    //firstpage.getElementById('up').innerHTML = currentValue;
+                  }); //#up-id function ends
+                  $('#down').click(function() { 
+                    if (currentValue > 0) { 
+                      currentValue--; 
+                        var mybutton = document.getElementById("down");
+						mybutton.innerHTML= currentValue;
+						mybutton.value = currentValue;
+                    } 
+                  }); 
+            });
+</script>
+    </div>
+</div>
+

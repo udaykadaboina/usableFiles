@@ -35,25 +35,28 @@
 				});
 
 			</script>
-			<button id="up">+</button>
+			<button id="up">currentValue</button>
+			
 			<button id="down">-</button> 
-			<script type="text/javascript">  
+	<script type="text/javascript">  
 			var currentValue = 0; 
 			$('#firstpage').live('pageinit', function(event) { 
 
   				$('#up').click(function() { 
     				currentValue++; 
     				alert(currentValue);
-  				}); 
+    				page.getElementById('up').innerHTML = currentValue;
+  				}); //#up-id function ends
   				$('#down').click(function() { 
     				if (currentValue > 0) { 
       				currentValue--; 
       				alert(currentValue);
 
     				} 
-  				}); 
-}); 
-</script>
+  				}); //#down-id function ends
+			});//live function ends
+			
+	</script>
         </div>
     </section>
 </body>
