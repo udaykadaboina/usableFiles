@@ -17,15 +17,19 @@
 
                   $('#up').click(function() { 
                     currentValue++; 
-                    alert(currentValue);
-                    //firstpage.getElementById('up').innerHTML = currentValue;
+                    var mybutton1 = document.getElementById("up");
+                    mybutton1.innerHTML= currentValue;
+                    mybutton1.value = currentValue;
+
+                    //alert(currentValue);
+                    
                   }); //#up-id function ends
                   $('#down').click(function() { 
                     if (currentValue > 0) { 
                       currentValue--; 
-                        var mybutton = document.getElementById("down");
-						mybutton.innerHTML= currentValue;
-						mybutton.value = currentValue;
+                        var mybutton2 = document.getElementById("down");
+                        mybutton2.innerHTML= currentValue;
+                        mybutton2.value = currentValue;
                     } 
                   }); 
             });
